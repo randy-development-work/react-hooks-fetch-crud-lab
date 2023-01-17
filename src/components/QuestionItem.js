@@ -1,4 +1,5 @@
 import React from "react";
+import QuestionList from "./QuestionList";
 
 function QuestionItem({ question }) {
   const { id, prompt, answers, correctIndex } = question;
