@@ -11,9 +11,14 @@ function QuestionList() {
     .then((data)=> setQuestions(()=>data))
   }, [])
 
+  function handleDelete(deletedQn) {
+    const updatedQns = questions.filter((question) => question.id !== deletedQn.id);
+    setQuestions(updatedQns)
+  }
+
   const displayQuestions = questions.map((question) => {    
     return (
-      <QuestionItem question={question} />
+      <QuestionItem question={question} onDelete={handleDelete}/>
     )
 })
 
