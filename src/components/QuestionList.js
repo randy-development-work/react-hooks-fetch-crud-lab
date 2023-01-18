@@ -16,9 +16,21 @@ function QuestionList() {
     setQuestions(updatedQns)
   }
 
+  function handleUpdatedItem(updatedQn) {
+    console.log("Updated:", updatedQn);
+    const updatedQuestions = questions.map((question) => {
+      if (question.id === updatedQn.id) {
+        return updatedQn;
+      } else {
+        return question;
+      }
+    });
+    setQuestions(updatedQuestions);
+  }
+
   const displayQuestions = questions.map((question) => {    
     return (
-      <QuestionItem question={question} onDelete={handleDelete}/>
+      <QuestionItem question={question} onDelete={handleDelete} onUpdate={handleUpdatedItem} />
     )
 })
 

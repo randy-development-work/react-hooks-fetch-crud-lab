@@ -65,6 +65,28 @@
         "controlled"
       ],
       "correctIndex": 1
+    },
+    {
+      "prompt": "2+0",
+      "answers": [
+        "2",
+        "400",
+        "6",
+        "101"
+      ],
+      "correctIndex": 0,
+      "id": 7
+    },
+    {
+      "prompt": "nmk",
+      "answers": [
+        "2",
+        "4",
+        "1",
+        "jk"
+      ],
+      "correctIndex": 3,
+      "id": 8
     }
   ]
 }
